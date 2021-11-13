@@ -27,3 +27,18 @@ print(v)
 
 # There are unch of method used in regular expression
 
+# Lets take another example 
+my_other_phone_numbers = "This is my one phone number 333-444-555 and i can make it +1-23-345-122"
+y = re.findall(pattern, my_other_phone_numbers)
+print(y)
+
+
+# But the given example does not give the idea about which is our exact phone numbers or which is not
+to_the_number = "lets make a call at 8:30 on my number +1-111-222-333"
+my_patter1 = "\d+"
+s = re.findall(my_patter1, to_the_number)
+print(s)
+
+my_patter2 = r"\+\d{1}\-\d{3}-\d{3}-\d{3}"
+d= re.findall(my_patter2, to_the_number)
+print(d)

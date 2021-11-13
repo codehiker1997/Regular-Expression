@@ -40,5 +40,15 @@ s = re.findall(my_patter1, to_the_number)
 print(s)
 
 my_patter2 = r"\+\d{1}\-\d{3}-\d{3}-\d{3}"
-d= re.findall(my_patter2, to_the_number)
+# THis is good practice to compile the regular expression
+regex = re.compile(my_patter2)
+d= re.findall(regex, to_the_number)
+
+
 print(d)
+# There are differen modues used in regular expression
+import re
+
+txt = "The rain in Spain"
+x = re.search(r"\bS\w+", txt)
+print(x.group())
